@@ -10,8 +10,8 @@ import com.bitdubai.fermat_cbp_api.layer.actor_network_service.crypto_customer.i
 import com.bitdubai.fermat_cbp_api.layer.actor_network_service.crypto_customer.utils.CryptoCustomerExposingData;
 import com.bitdubai.fermat_p2p_api.layer.p2p_communication.commons.client.CommunicationsClientConnection;
 import com.bitdubai.fermat_p2p_api.layer.p2p_communication.commons.exceptions.CantRequestListException;
-import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.ErrorManager;
-import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.UnexpectedPluginExceptionSeverity;
+import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.interfaces.ErrorManager;
+import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.enums.UnexpectedPluginExceptionSeverity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,6 +46,7 @@ public final class CryptoCustomerActorNetworkServiceSearch extends CryptoCustome
                     PlatformComponentType.ACTOR_CRYPTO_CUSTOMER, // PlatformComponentType you want to find
                     NetworkServiceType   .UNDEFINED,           // NetworkServiceType you want to find
                     null,                                      // alias
+                    null,                                      // phrase
                     null,                                      // identityPublicKey
                     null,                                      // location
                     null,                                      // distance

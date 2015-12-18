@@ -18,6 +18,7 @@ public class RedeemPointActorRecord implements ActorAssetRedeemPoint {
     private String              actorPublicKey      ;
     private String              name                ;
     private long                registrationDate    ;
+    private long                lastConnectionDate  ;
     private DAPConnectionState  dapConnectionState  ;
     private CryptoAddress       cryptoAddress       ;
     private Location            location            ;
@@ -44,17 +45,19 @@ public class RedeemPointActorRecord implements ActorAssetRedeemPoint {
                                   byte[] profileImage,
                                   Location location) {
 
-        this.name                   = name                      ;
-        this.actorPublicKey         = actorPublicKey            ;
-        this.profileImage           = profileImage.clone()      ;
+        this.name                   = name                                  ;
+        this.actorPublicKey         = actorPublicKey                        ;
+        this.profileImage           = profileImage.clone()                  ;
 
         if (location != null) {
-            this.locationLatitude   = location.getLatitude()    ;
-            this.locationLongitude  = location.getLongitude()   ;
+            this.locationLatitude   = location.getLatitude()                ;
+            this.locationLongitude  = location.getLongitude()               ;
         }else{
-            this.locationLatitude   = (double) 0                ;
-            this.locationLongitude  = (double) 0                ;
+            this.locationLatitude   = (double) 0                            ;
+            this.locationLongitude  = (double) 0                            ;
         }
+        this.dapConnectionState     = DAPConnectionState.REGISTERED_ONLINE  ;
+
     }
 
     public RedeemPointActorRecord(String name,
@@ -92,6 +95,64 @@ public class RedeemPointActorRecord implements ActorAssetRedeemPoint {
         this.locationLongitude  = locationLongitude     ;
         this.registrationDate   = registrationDate      ;
         this.profileImage       = profileImage.clone()  ;
+    }
+
+
+
+//    public RedeemPointActorRecord(String actorPublicKey,
+//                                  String name,
+//                                  DAPConnectionState dapConnectionState,
+//                                  Double locationLatitude,
+//                                  Double locationLongitude,
+//                                  CryptoAddress cryptoAddress,
+//                                  Long registrationDate,
+//                                  Long lastConnectionDate,
+//                                  byte[] profileImage) {
+//
+//        this.actorPublicKey         =       actorPublicKey          ;
+//        this.name                   =       name                    ;
+//        this.dapConnectionState     =       dapConnectionState      ;
+//
+//        if (locationLatitude != null)
+//            this.locationLatitude       = locationLatitude          ;
+//        if(locationLongitude != null)
+//            this.locationLongitude      = locationLongitude         ;
+//
+//        if(cryptoAddress != null)
+//            this.cryptoAddress          = cryptoAddress             ;
+//
+//        this.registrationDate       =       registrationDate        ;
+//        this.lastConnectionDate     =       lastConnectionDate      ;
+//        this.profileImage           =       profileImage.clone()    ;
+//
+//    }
+
+    public RedeemPointActorRecord(final String actorPublicKey,
+                                  final String name,
+                                  final DAPConnectionState dapConnectionState,
+                                  final Double locationLatitude,
+                                  final Double locationLongitude,
+                                  final CryptoAddress cryptoAddress,
+                                  final Long registrationDate,
+                                  final Long lastConnectionDate,
+                                  final byte[] profileImage) {
+
+        this.actorPublicKey         =       actorPublicKey          ;
+        this.name                   =       name                    ;
+        this.dapConnectionState     =       dapConnectionState      ;
+
+        if (locationLatitude != null)
+            this.locationLatitude       = locationLatitude          ;
+        if(locationLongitude != null)
+            this.locationLongitude      = locationLongitude         ;
+
+        if(cryptoAddress != null)
+            this.cryptoAddress          = cryptoAddress             ;
+
+        this.registrationDate       =       registrationDate        ;
+        this.lastConnectionDate     =       lastConnectionDate      ;
+        this.profileImage           =       profileImage.clone()    ;
+
     }
 
     /**
@@ -136,6 +197,21 @@ public class RedeemPointActorRecord implements ActorAssetRedeemPoint {
     public void setRegistrationDate(long registrationDate) {
         this.registrationDate = registrationDate;
     }
+
+    /**
+     * The method <code>getLastConnectionDate</code> gives us the Las Connection Date of the
+     * represented Asset Redeem Point
+     *
+     * @return the Connection Date
+     */
+    public long getLastConnectionDate() {
+        return lastConnectionDate;
+    }
+
+    public void setLastConnectionDate(long lastConnectionDate) {
+        this.lastConnectionDate = lastConnectionDate;
+    }
+
     /**
      * The method <coda>getProfileImage</coda> gives us the profile image of the represented Redeem Point
      *

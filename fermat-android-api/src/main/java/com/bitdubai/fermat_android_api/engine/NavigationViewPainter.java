@@ -1,6 +1,8 @@
 package com.bitdubai.fermat_android_api.engine;
 
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +20,11 @@ public interface NavigationViewPainter {
 
     ViewGroup addNavigationViewBodyContainer(LayoutInflater layoutInflater,ViewGroup base);
 
-    Drawable addBodyBackground();
+    Bitmap addBodyBackground();
 
     int addBodyBackgroundColor();
+
+    RecyclerView.ItemDecoration addItemDecoration();
+
+    boolean hasBodyBackground();
 }

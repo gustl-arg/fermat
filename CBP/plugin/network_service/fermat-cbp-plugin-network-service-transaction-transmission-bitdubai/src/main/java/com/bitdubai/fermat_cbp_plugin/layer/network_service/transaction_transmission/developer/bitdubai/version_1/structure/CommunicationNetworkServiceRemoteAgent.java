@@ -5,9 +5,9 @@ import com.bitdubai.fermat_api.layer.all_definition.crypto.asymmetric.Asymmetric
 import com.bitdubai.fermat_api.layer.all_definition.crypto.asymmetric.ECCKeyPair;
 import com.bitdubai.fermat_api.layer.all_definition.events.EventSource;
 import com.bitdubai.fermat_api.layer.all_definition.events.interfaces.FermatEvent;
-import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.database.CommunicationNetworkServiceDatabaseConstants;
-import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.database.IncomingMessageDao;
-import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.database.OutgoingMessageDao;
+import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.communications.CommunicationNetworkServiceDatabaseConstants;
+import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.communications.IncomingMessageDao;
+import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.communications.OutgoingMessageDao;
 import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.exceptions.CantInsertRecordDataBaseException;
 import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.exceptions.CantReadRecordDataBaseException;
 import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.exceptions.CantUpdateRecordDataBaseException;
@@ -19,8 +19,8 @@ import com.bitdubai.fermat_p2p_api.layer.p2p_communication.MessagesStatus;
 import com.bitdubai.fermat_p2p_api.layer.p2p_communication.commons.client.CommunicationsVPNConnection;
 import com.bitdubai.fermat_p2p_api.layer.p2p_communication.commons.contents.FermatMessage;
 import com.bitdubai.fermat_p2p_api.layer.p2p_communication.commons.enums.FermatMessagesStatus;
-import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.ErrorManager;
-import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.UnexpectedPluginExceptionSeverity;
+import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.interfaces.ErrorManager;
+import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.enums.UnexpectedPluginExceptionSeverity;
 import com.bitdubai.fermat_pip_api.layer.platform_service.event_manager.interfaces.EventManager;
 
 import java.util.HashMap;
@@ -52,8 +52,8 @@ public final class CommunicationNetworkServiceRemoteAgent extends Observable {
     private final CommunicationsVPNConnection communicationsVPNConnection;
     private final ErrorManager                errorManager               ;
     private final EventManager                eventManager               ;
-    private final IncomingMessageDao          incomingMessageDao         ;
-    private final OutgoingMessageDao          outgoingMessageDao         ;
+    private final IncomingMessageDao incomingMessageDao         ;
+    private final OutgoingMessageDao outgoingMessageDao         ;
     private final EventSource                 eventSource                ;
     private final PluginVersionReference      pluginVersionReference     ;
 
@@ -66,11 +66,6 @@ public final class CommunicationNetworkServiceRemoteAgent extends Observable {
     private final Thread toReceive;
     //Represent the send messages tread of this CommunicationNetworkServiceRemoteAgent
     private final Thread toSend;
-
-    /**
-     * Represent the eccKeyPair
-     */
-
 
     /**
      * Constructor with parameters.
@@ -228,7 +223,9 @@ public final class CommunicationNetworkServiceRemoteAgent extends Observable {
             }
 
         } catch (InterruptedException e) {
-            errorManager.reportUnexpectedPluginException(pluginVersionReference, UnexpectedPluginExceptionSeverity.DISABLES_SOME_FUNCTIONALITY_WITHIN_THIS_PLUGIN, new Exception("Can not sleep"));
+            toReceive.interrupt();
+            System.out.println("CommunicationNetworkServiceRemoteAgent - Thread Interrupted stopped ...  ");
+            return;
         } catch (CantInsertRecordDataBaseException e) {
             errorManager.reportUnexpectedPluginException(pluginVersionReference, UnexpectedPluginExceptionSeverity.DISABLES_SOME_FUNCTIONALITY_WITHIN_THIS_PLUGIN, new Exception("Can not process message received. Error reason: "+e.getMessage()));
         }
@@ -296,8 +293,7 @@ public final class CommunicationNetworkServiceRemoteAgent extends Observable {
                     }
 
                 } catch(CantUpdateRecordDataBaseException |
-                        CantReadRecordDataBaseException   |
-                        RecordNotFoundException           e) {
+                        CantReadRecordDataBaseException           e) {
 
                     errorManager.reportUnexpectedPluginException(pluginVersionReference, UnexpectedPluginExceptionSeverity.DISABLES_SOME_FUNCTIONALITY_WITHIN_THIS_PLUGIN, e);
                 }
@@ -309,7 +305,9 @@ public final class CommunicationNetworkServiceRemoteAgent extends Observable {
             }
 
         } catch (InterruptedException e) {
-            errorManager.reportUnexpectedPluginException(pluginVersionReference, UnexpectedPluginExceptionSeverity.DISABLES_SOME_FUNCTIONALITY_WITHIN_THIS_PLUGIN,e);
+            toSend.interrupt();
+            System.out.println("CommunicationNetworkServiceRemoteAgent - Thread Interrupted stopped ...  ");
+            return;
         }
 
     }

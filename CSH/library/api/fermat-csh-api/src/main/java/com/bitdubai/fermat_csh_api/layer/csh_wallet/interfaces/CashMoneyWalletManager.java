@@ -1,13 +1,16 @@
 package com.bitdubai.fermat_csh_api.layer.csh_wallet.interfaces;
 
+import com.bitdubai.fermat_api.layer.all_definition.common.system.interfaces.FermatManager;
 import com.bitdubai.fermat_api.layer.all_definition.enums.FiatCurrency;
-import com.bitdubai.fermat_csh_api.layer.csh_wallet.exceptions.CantCreateCashMoneyException;
-import com.bitdubai.fermat_csh_api.layer.csh_wallet.exceptions.CantLoadCashMoneyException;
+import com.bitdubai.fermat_csh_api.layer.csh_wallet.exceptions.CantCreateCashMoneyWalletException;
+import com.bitdubai.fermat_csh_api.layer.csh_wallet.exceptions.CantLoadCashMoneyWalletException;
+
+
 
 /**
  * Created by Yordin Alayn on 26.09.15.
  */
-public interface CashMoneyWalletManager {
+public interface CashMoneyWalletManager extends FermatManager {
 
 
     /**
@@ -15,7 +18,7 @@ public interface CashMoneyWalletManager {
      *
      * @return A CashMoneyWalletBalance object
      */
-    CashMoneyWallet loadCashMoneyWallet(String walletPublicKey) throws CantLoadCashMoneyException;
+    CashMoneyWallet loadCashMoneyWallet(String walletPublicKey) throws CantLoadCashMoneyWalletException;
 
 
     /**
@@ -23,6 +26,12 @@ public interface CashMoneyWalletManager {
      *
      * @return A CashMoneyWalletBalance object
      */
-    void createCashMoney(String walletPublicKey, FiatCurrency fiatCurrency) throws CantCreateCashMoneyException;
+    void createCashMoneyWallet(String walletPublicKey, FiatCurrency fiatCurrency) throws CantCreateCashMoneyWalletException;
+
+    /**
+     * Checks if wallet exists in wallet database
+     *
+     */
+    boolean cashMoneyWalletExists(String walletPublicKey);
 
 }

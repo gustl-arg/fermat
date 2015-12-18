@@ -60,8 +60,8 @@ import com.bitdubai.fermat_cbp_plugin.layer.actor_network_service.crypto_broker.
 import com.bitdubai.fermat_cbp_plugin.layer.actor_network_service.crypto_broker.developer.bitdubai.version_1.structure.CryptoBrokerExecutorAgent;
 import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.abstract_classes.AbstractNetworkService;
 import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.exceptions.CantLoadKeyPairException;
-import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.database.CommunicationNetworkServiceDatabaseConstants;
-import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.database.CommunicationNetworkServiceDatabaseFactory;
+import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.communications.CommunicationNetworkServiceDatabaseConstants;
+import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.communications.CommunicationNetworkServiceDatabaseFactory;
 import com.bitdubai.fermat_p2p_api.layer.all_definition.common.network_services.template.exceptions.CantInitializeNetworkServiceDatabaseException;
 import com.bitdubai.fermat_p2p_api.layer.all_definition.communication.enums.P2pEventType;
 import com.bitdubai.fermat_p2p_api.layer.all_definition.communication.events.ClientConnectionCloseNotificationEvent;
@@ -70,8 +70,8 @@ import com.bitdubai.fermat_p2p_api.layer.p2p_communication.WsCommunicationsCloud
 import com.bitdubai.fermat_p2p_api.layer.p2p_communication.commons.client.CommunicationsClientConnection;
 import com.bitdubai.fermat_p2p_api.layer.p2p_communication.commons.contents.FermatMessage;
 import com.bitdubai.fermat_p2p_api.layer.p2p_communication.commons.exceptions.CantRequestListException;
-import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.ErrorManager;
-import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.UnexpectedPluginExceptionSeverity;
+import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.interfaces.ErrorManager;
+import com.bitdubai.fermat_pip_api.layer.platform_service.error_manager.enums.UnexpectedPluginExceptionSeverity;
 import com.bitdubai.fermat_pip_api.layer.platform_service.event_manager.interfaces.EventManager;
 import com.google.gson.Gson;
 
@@ -212,17 +212,17 @@ public class CryptoBrokerActorNetworkServicePluginRoot extends AbstractNetworkSe
                     getPluginVersionReference()
             );
 
+            /*
+             * Its all ok, set the new status
+             */
+            this.serviceStatus = ServiceStatus.STARTED;
+
 
         } catch(final CantInitializeDatabaseException e) {
 
             errorManager.reportUnexpectedPluginException(this.getPluginVersionReference(), UnexpectedPluginExceptionSeverity.DISABLES_THIS_PLUGIN, e);
             throw new CantStartPluginException(e, "", "Problem initializing crypto broker ans dao.");
         }
-
-        /*
-         * Its all ok, set the new status
-         */
-        this.serviceStatus = ServiceStatus.STARTED;
     }
 
     private CryptoBrokerActorNetworkServiceManager fermatManager;
@@ -446,7 +446,8 @@ public class CryptoBrokerActorNetworkServicePluginRoot extends AbstractNetworkSe
                 errorManager,
                 eventManager,
                 this.getEventSource(),
-                getPluginVersionReference()
+                getPluginVersionReference(),
+                this
         );
     }
 
@@ -466,12 +467,13 @@ public class CryptoBrokerActorNetworkServicePluginRoot extends AbstractNetworkSe
 
     /**
      * (non-javadoc)
-     * @see NetworkService#constructDiscoveryQueryParamsFactory(PlatformComponentType, NetworkServiceType, String, String, Location, Double, String, String, Integer, Integer, PlatformComponentType, NetworkServiceType)
+     * @see NetworkService#constructDiscoveryQueryParamsFactory(PlatformComponentType, NetworkServiceType, String,String, String, Location, Double, String, String, Integer, Integer, PlatformComponentType, NetworkServiceType)
      */
     @Override
     public DiscoveryQueryParameters constructDiscoveryQueryParamsFactory(final PlatformComponentType platformComponentType         ,
                                                                          final NetworkServiceType    networkServiceType            ,
                                                                          final String                alias                         ,
+                                                                         final String                phrase                         ,
                                                                          final String                identityPublicKey             ,
                                                                          final Location              location                      ,
                                                                          final Double                distance                      ,
@@ -486,6 +488,7 @@ public class CryptoBrokerActorNetworkServicePluginRoot extends AbstractNetworkSe
                 platformComponentType         ,
                 networkServiceType            ,
                 alias                         ,
+                phrase                          ,
                 identityPublicKey             ,
                 location                      ,
                 distance                      ,
@@ -646,8 +649,9 @@ public class CryptoBrokerActorNetworkServicePluginRoot extends AbstractNetworkSe
     private void receiveInformation(final InformationMessage informationMessage) throws CantHandleNewMessagesException {
 
         try {
+// TODO CHANGE TO PROCESSING RECEIVE
 
-            final ProtocolState state = ProtocolState.PROCESSING_RECEIVE;
+            final ProtocolState state = ProtocolState.PENDING_LOCAL_ACTION;
 
             switch (informationMessage.getAction()) {
                 case ACCEPT:
@@ -688,9 +692,9 @@ public class CryptoBrokerActorNetworkServicePluginRoot extends AbstractNetworkSe
     private void receiveRequest(final RequestMessage requestMessage) throws CantHandleNewMessagesException {
 
         try {
-
-            final ProtocolState           state  = ProtocolState          .PROCESSING_RECEIVE;
-            final RequestType             type   = RequestType            .RECEIVED          ;
+// TODO CHANGE TO PROCESSING RECEIVE
+            final ProtocolState           state  = ProtocolState.PENDING_LOCAL_ACTION;
+            final RequestType             type   = RequestType  .RECEIVED            ;
 
             final CryptoBrokerConnectionInformation connectionInformation = new CryptoBrokerConnectionInformation(
                     requestMessage.getSenderPublicKey(),

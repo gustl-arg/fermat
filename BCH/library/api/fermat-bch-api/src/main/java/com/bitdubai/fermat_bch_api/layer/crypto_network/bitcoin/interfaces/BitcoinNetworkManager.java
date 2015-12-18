@@ -94,4 +94,21 @@ public interface BitcoinNetworkManager extends TransactionSender<CryptoTransacti
      */
     List<Transaction> getBitcoinTransaction(BlockchainNetworkType blockchainNetworkType, VaultType vaultType);
 
+    /**
+     * Will get all the CryptoTransactions stored in the CryptoNetwork which are a child of a parent Transaction
+     * @param parentHash
+     * @return
+     * @throws CantGetCryptoTransactionException
+     */
+    List<CryptoTransaction> getChildCryptoTransaction(String parentHash) throws CantGetCryptoTransactionException;
+
+    /**
+     * Will get all the CryptoTransactions stored in the CryptoNetwork which are a child of a parent Transaction
+     * @param parentHash the parent transaction
+     * @param depth the depth of how many transactions we will navigate until we reach the parent transaction. Max is 10
+     * @return
+     * @throws CantGetCryptoTransactionException
+     */
+    List<CryptoTransaction> getChildCryptoTransaction(String parentHash, int depth) throws CantGetCryptoTransactionException;
+
 }

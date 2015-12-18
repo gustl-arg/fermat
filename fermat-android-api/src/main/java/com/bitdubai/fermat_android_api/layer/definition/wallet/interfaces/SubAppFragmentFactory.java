@@ -6,7 +6,7 @@ package com.bitdubai.fermat_android_api.layer.definition.wallet.interfaces;
 
 import com.bitdubai.fermat_android_api.layer.definition.wallet.exceptions.FragmentNotFoundException;
 import com.bitdubai.fermat_wpd_api.layer.wpd_middleware.wallet_settings.interfaces.SubAppSettings;
-import com.bitdubai.fermat_pip_api.layer.pip_network_service.subapp_resources.SubAppResourcesProviderManager;
+import com.bitdubai.fermat_pip_api.layer.network_service.subapp_resources.SubAppResourcesProviderManager;
 
 /**
  * This interface provides the fragments and objects needed by the wallet runtime
@@ -14,7 +14,7 @@ import com.bitdubai.fermat_pip_api.layer.pip_network_service.subapp_resources.Su
  * @author Matias Furszyfer
  */
 
-public interface SubAppFragmentFactory<S extends SubAppsSession,J extends SubAppSettings>{
+public interface SubAppFragmentFactory<S extends FermatSession,J extends SubAppSettings>{
 
     /**
      * This method takes a reference (string) to a fragment and returns the corresponding fragment.

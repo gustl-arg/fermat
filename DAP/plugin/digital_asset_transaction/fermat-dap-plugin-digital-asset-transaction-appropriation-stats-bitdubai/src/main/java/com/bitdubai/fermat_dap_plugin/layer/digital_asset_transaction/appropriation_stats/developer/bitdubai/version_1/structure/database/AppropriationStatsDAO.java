@@ -21,6 +21,7 @@ import com.bitdubai.fermat_api.layer.osa_android.database_system.exceptions.Cant
 import com.bitdubai.fermat_api.layer.osa_android.database_system.exceptions.DatabaseNotFoundException;
 import com.bitdubai.fermat_dap_api.layer.all_definition.digital_asset.DigitalAsset;
 import com.bitdubai.fermat_dap_api.layer.all_definition.enums.EventStatus;
+import com.bitdubai.fermat_dap_api.layer.all_definition.enums.EventType;
 import com.bitdubai.fermat_dap_api.layer.dap_actor.asset_user.AssetUserActorRecord;
 import com.bitdubai.fermat_dap_api.layer.dap_actor.asset_user.interfaces.ActorAssetUser;
 import com.bitdubai.fermat_dap_api.layer.dap_transaction.appropriation_stats.exceptions.CantCheckAppropriationStatsException;
@@ -28,7 +29,6 @@ import com.bitdubai.fermat_dap_api.layer.dap_transaction.appropriation_stats.exc
 import com.bitdubai.fermat_dap_api.layer.dap_transaction.common.exceptions.CantSaveEventException;
 import com.bitdubai.fermat_dap_api.layer.dap_transaction.common.exceptions.RecordsNotFoundException;
 import com.bitdubai.fermat_dap_plugin.layer.digital_asset_transaction.appropriation_stats.developer.bitdubai.version_1.exceptions.CantLoadAppropriationStatsEventListException;
-import com.bitdubai.fermat_pip_api.layer.platform_service.event_manager.enums.EventType;
 
 import java.io.Closeable;
 import java.util.ArrayList;
@@ -111,7 +111,7 @@ public class AppropriationStatsDAO implements AutoCloseable {
         String context = "Asset: " + assetAppropriated;
         try {
             DatabaseTable appropriatedTable = database.getTable(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_APPROPRIATED_TABLE_NAME);
-            appropriatedTable.setStringFilter(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_APPROPRIATED_ASSET_COLUMN_NAME, XMLParser.parseObject(assetAppropriated), DatabaseFilterType.EQUAL);
+            appropriatedTable.addStringFilter(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_APPROPRIATED_ASSET_COLUMN_NAME, XMLParser.parseObject(assetAppropriated), DatabaseFilterType.EQUAL);
             appropriatedTable.loadToMemory();
             List<ActorAssetUser> listToReturn = new ArrayList<>();
             if (appropriatedTable.getRecords().isEmpty()) return Collections.EMPTY_LIST;
@@ -129,7 +129,7 @@ public class AppropriationStatsDAO implements AutoCloseable {
         String context = "ActorAssetUser: " + userThatAppropriated;
         try {
             DatabaseTable appropriatedTable = database.getTable(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_APPROPRIATED_TABLE_NAME);
-            appropriatedTable.setStringFilter(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_APPROPRIATED_USER_COLUMN_NAME, XMLParser.parseObject(userThatAppropriated), DatabaseFilterType.EQUAL);
+            appropriatedTable.addStringFilter(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_APPROPRIATED_USER_COLUMN_NAME, XMLParser.parseObject(userThatAppropriated), DatabaseFilterType.EQUAL);
             appropriatedTable.loadToMemory();
             List<DigitalAsset> listToReturn = new ArrayList<>();
             if (appropriatedTable.getRecords().isEmpty()) return Collections.EMPTY_LIST;
@@ -214,7 +214,7 @@ public class AppropriationStatsDAO implements AutoCloseable {
         try {
             DatabaseTable eventRecordedTable;
             eventRecordedTable = database.getTable(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_TABLE_NAME);
-            eventRecordedTable.setStringFilter(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_ID_COLUMN_NAME, id, DatabaseFilterType.EQUAL);
+            eventRecordedTable.addStringFilter(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_ID_COLUMN_NAME, id, DatabaseFilterType.EQUAL);
             eventRecordedTable.loadToMemory();
 
             if (eventRecordedTable.getRecords().isEmpty()) {
@@ -237,8 +237,8 @@ public class AppropriationStatsDAO implements AutoCloseable {
             String context = "Column Name: " + columnName + " - Id: " + id;
             DatabaseTable databaseTable;
             databaseTable = database.getTable(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_TABLE_NAME);
-            databaseTable.setStringFilter(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_ID_COLUMN_NAME, id, DatabaseFilterType.EQUAL);
-            databaseTable.setFilterOrder(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_TIMESTAMP_COLUMN_NAME, DatabaseFilterOrder.ASCENDING);
+            databaseTable.addStringFilter(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_ID_COLUMN_NAME, id, DatabaseFilterType.EQUAL);
+            databaseTable.addFilterOrder(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_TIMESTAMP_COLUMN_NAME, DatabaseFilterOrder.ASCENDING);
             databaseTable.loadToMemory();
 
             for (DatabaseTableRecord record : databaseTable.getRecords()) {
@@ -274,7 +274,7 @@ public class AppropriationStatsDAO implements AutoCloseable {
                             new ArrayList<DatabaseTableFilterGroup>(),
                             DatabaseFilterOperator.AND));
 
-            eventsRecordedTable.setFilterOrder(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_TIMESTAMP_COLUMN_NAME, DatabaseFilterOrder.ASCENDING);
+            eventsRecordedTable.addFilterOrder(AssetAppropriationStatsDatabaseConstants.APPROPRIATION_STATS_EVENTS_RECORDED_TIMESTAMP_COLUMN_NAME, DatabaseFilterOrder.ASCENDING);
 
             eventsRecordedTable.loadToMemory();
             List<String> eventIdList = new ArrayList<>();
