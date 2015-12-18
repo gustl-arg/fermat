@@ -1,8 +1,6 @@
 # Git Management
 
-In order to have a better understanding of the content, please read the following document: [Contributing](https://github.com/bitDubai/fermat/CONTRIBUTING.md)
-
-#### !!! El link "Contributing" envia a una pagina que no existe Error 404 !!!
+In order to have a better understanding of the content, please read the following document: [Contributing](https://github.com/bitDubai/fermat/blob/master/CONTRIBUTING.md)
 
 When it comes to contributing via git we've identified two roles, the first is the one who commits to his changes, while the other is responsible of mixing said committed changes.
 
