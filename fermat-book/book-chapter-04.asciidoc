@@ -1,5 +1,5 @@
 :numbered!:
-image::https://raw.githubusercontent.com/bitDubai/media-kit/master/Readme%20Image/Coins/OSA.jpg[OperatingSystems]
+image::https://raw.githubusercontent.com/bitDubai/media-kit/master/MediaKit/Coins/Platform%20Coins/OSA/OSA.jpg[OperatingSystems]
 
 [[superlayers]]
 == Chapter 4: Fermat Operating Systems Superlayer 
@@ -36,7 +36,7 @@ Database System :: access to plug-in proprietary databases +
 
 :numbered!:
 
-image::https://raw.githubusercontent.com/bitDubai/media-kit/master/Readme%20Image/Background/Front_Bitcoin_scn_low.jpg[FermatCoin]
+image::https://raw.githubusercontent.com/bitDubai/media-kit/master/MediaKit/Coins/Fermat%20Bitcoin/PerspView/1/Front_MedQ_1280x720.jpg[FermatCoin]
   
 ==== Continue Reading ...
 link:book-chapter-05.asciidoc[Next Chapter]
