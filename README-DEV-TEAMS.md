@@ -1,4 +1,4 @@
-![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
+![alt text](https://github.com/Fermat-ORG/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
 
 # Dev Teams
 
@@ -10,7 +10,7 @@ Fermat Dev Teams is a network of teams working on the Fermat project. In this do
 
 Below you will find a list of Fermat developers teams. Feel free to contact the team leader if you want to join any of them.
 
-You can also contribute to the Fermat project through other means. Please refer to the [CONTRIBUTING GUIDE](https://github.com/bitDubai/fermat/blob/master/CONTRIBUTING.md) for more details.
+You can also contribute to the Fermat project through other means. Please refer to the [CONTRIBUTING GUIDE](https://github.com/Fermat-ORG/fermat/blob/master/CONTRIBUTING.md) for more details.
 
 ## Fermat Dev Teams Organization
 
@@ -125,7 +125,7 @@ Developers and team leaders in particular are classified by the deepness of the 
 ### Thunder Team:
 -----------------------------------
 <br>
-### ![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Logotype/Fermat%20Teams/Thunder%20Team/HQ_1920x1080.jpg "Thunder Team Logo"")
+### ![alt text](https://github.com/Fermat-ORG/media-kit/blob/master/MediaKit/Logotype/Fermat%20Teams/Thunder%20Team/HQ_1920x1080.jpg "Thunder Team Logo"")
 
 More than a Team we are a group of highly motivated friends pursuing the goal of taking Fermat to success! We are in charge of core development and top priority platforms like DAP, BCH and WPD among others. A highly communicated group of developers solving issues and dealing with high difficulty designs and implementations, with a lot of room for other priorities like music, Star Wars, series and movies.
 
@@ -167,7 +167,7 @@ More than a Team we are a group of highly motivated friends pursuing the goal of
 ### Coin Diggers Team:
 -----------------------------------
 <br>
-### ![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Logotype/Fermat%20Teams/CoinDiggers%20Team/HQ_1920x1080.jpg "Logo Coin Diggers Team")
+### ![alt text](https://github.com/Fermat-ORG/media-kit/blob/master/MediaKit/Logotype/Fermat%20Teams/CoinDiggers%20Team/HQ_1920x1080.jpg "Logo Coin Diggers Team")
 
 We are passionate geeks, always on the edge of technology and a little more. 
 With the only phrase "Keep moving forward" we just walk through Fermat.
@@ -230,7 +230,7 @@ We would be grateful for any help received, and anyone interested in joining the
 <br/>
 ### Mordor Team:
 -----------------------------------
-### ![alt text](https://raw.githubusercontent.com/bitDubai/media-kit/1479ec1f2e93a1b11f0f1ac9e312099f08aa7aec/Logotype/FermatTeams/logo_mordor_team.jpg "Logo Mordor Team")
+### ![alt text](https://raw.githubusercontent.com/Fermat-ORG/media-kit/1479ec1f2e93a1b11f0f1ac9e312099f08aa7aec/Logotype/FermatTeams/logo_mordor_team.jpg "Logo Mordor Team")
 We are putting together a team of talented developers, especially passionate about the implementation of major challenges, in order to carry out our goals and collaborate with other teams on their goals.
 
 * In the Crypto Broker Platform we are responsible for a large part of business transactions. 
@@ -282,7 +282,7 @@ This is a team full of manga, anime, comics, sci-fi and Tolkien fans, also we re
 <br/>
 ### Kabuto Team:
 -----------------------------------
-### ![alt text](https://raw.githubusercontent.com/bitDubai/media-kit/1479ec1f2e93a1b11f0f1ac9e312099f08aa7aec/Logotype/FermatTeams/logo_kabuto_team.jpg "Logo Kabuto Team")
+### ![alt text](https://raw.githubusercontent.com/Fermat-ORG/media-kit/1479ec1f2e93a1b11f0f1ac9e312099f08aa7aec/Logotype/FermatTeams/logo_kabuto_team.jpg "Logo Kabuto Team")
 Passionate about technologies, programming for us is part of our life and virtues, using as always ethical management best practices for writing our code.
 
 In the Crypto Broker Platform we are responsible for a large part of user level business transactions, wallet and module, while in the Chat Platform we are developing the back end.
@@ -331,7 +331,7 @@ We are also amateur philosophers, passionate about esoteric topics and video gam
 
 ### Skynet Team:
 -----------------------------------
-### ![alt text](https://raw.githubusercontent.com/bitDubai/media-kit/b3d2a45ba6cff999accae76ae30fdd41f160b90d/Logotype/FermatTeams/logo_skynet_team.jpg "Logo Skynet Team")
+### ![alt text](https://raw.githubusercontent.com/Fermat-ORG/media-kit/b3d2a45ba6cff999accae76ae30fdd41f160b90d/Logotype/FermatTeams/logo_skynet_team.jpg "Logo Skynet Team")
 From the most hidden and beautiful corner, in an unknown place of the universe, a network that gathers a group of polymaths is born. Such network combines their knowledge and artificial intelligence in order to overcome any obstacle that might try to avoid giving life to a limitless project.. that network is Team Skynet, a group of workaholics that enjoys turning challenges into fun, having a great will to help the needed and learn continuously.
 We are a team with diverse tastes and full of color making it an explosive integration. We love video games, anime, movie theaters, music and many other things. If you want to be part of our team, you will be always welcome at Skynet
 
