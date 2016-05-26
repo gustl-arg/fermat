@@ -1,4 +1,4 @@
-![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
+![alt text](https://github.com/Fermat-ORG/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
 # Installation and Configuration Guide for Fermat Development Environment 
 
 <br>
@@ -45,12 +45,12 @@ Although there are many ways to configure these tools, we suggest to follow the 
 
 
 ### 3.- Installation
-You can try first the Automatic installation, but if you prefer to do it manually, go directly to the following section [Manual Installation] (https://github.com/bitDubai/fermat/blob/master/README-INSTALLATION.md#Manual)
+You can try first the Automatic installation, but if you prefer to do it manually, go directly to the following section [Manual Installation] (https://github.com/Fermat-ORG/fermat/blob/master/README-INSTALLATION.md#Manual)
 
 #### A.- Automatic Installation
 
 * You can install all the needed software automatically using the following script: (please use "right-clic" and "save as.." and save it in your _$HOME_ folder ) 
-[FermatDeveloperInstaller.sh] (https://raw.githubusercontent.com/bitDubai/fermat/master/scripts/installation/fermat-developer-installer/FermatDeveloperInstaller.sh).
+[FermatDeveloperInstaller.sh] (https://raw.githubusercontent.com/Fermat-ORG/fermat/master/scripts/installation/fermat-developer-installer/FermatDeveloperInstaller.sh).
 
 * If you are running Ubuntu in 64 bit mode, skip next step and go directly to executing the script.
 
@@ -200,7 +200,7 @@ After finishing setting up the environment ( automatically or manually), you nee
 #### Create your fork.
 
 * Enter to GitHub:
-https://github.com/bitDubai/fermat then create Fork:
+https://github.com/Fermat-ORG/fermat then create Fork:
 To fork you must press button “Fork” in the top-right corner of the url, and then, select your user.
 
 You have your Fork created!
@@ -229,15 +229,15 @@ origin https://github.com/$YOUR_USER/fermat (push)
 ##### Create a local branch pointing to the original project.
 * Create a new local branch, pointing to the original project:
 ```shell
-git remote add newbranch https://github.com/bitDubai/fermat
+git remote add newbranch https://github.com/Fermat-ORG/fermat
 git remote -v
 ```
 * The console must return you something like this:
 ```shell
 origin https://github.com/lnacosta/fermat (fetch)
 origin https://github.com/lnacosta/fermat (push)
-newbranch https://github.com/bitDubai/fermat (fetch)
-newbranch https://github.com/bitDubai/fermat (push)
+newbranch https://github.com/Fermat-ORG/fermat (fetch)
+newbranch https://github.com/Fermat-ORG/fermat (push)
 ```
 
 * Follow section: **“Create a local branch pointing to the original project”.**
