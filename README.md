@@ -1,5 +1,6 @@
 <!-- all links tested by laderuner -->
-![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
+![alt text](
+https://github.com/Fermat-ORG/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
 
 # Welcome to Fermat!
 
@@ -25,7 +26,7 @@ Fermat is a p2p financial application framework that enables any kind of trust-l
 
 The framework evolves from the stand-alone crypto wallet and enables an ecosystem of peer-to-peer financial applications that are both crypto currency and digital asset enabled. The Framework handles a full stack of layers. Starting down from an OS API level, to a Blockchain, Communication, Platform, and User Interface Level. 
 
-![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Coins/Platform%20Coins/PIP/PIP.jpg "Plugins Platform")
+![alt text](https://Fermat-ORG/media-kit/blob/master/MediaKit/Coins/Platform%20Coins/PIP/PIP.jpg "Plugins Platform")
 
 #### The Network
 
@@ -33,7 +34,7 @@ Crypto networks are peer-to-Peer electronic cash systems that allow online payme
 
 Fermat features a peer-to-peer network for transporting metadata and interconnect network clients between each other. On top of that network a synchronization scheme transforms a standalone app into a distributed application across several devices still owned by the same user. 
 
-![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Coins/Platform%20Coins/P2P/P2P.jpg "Peer to Peer Network")
+![alt text](https://Fermat-ORG/media-kit/blob/master/MediaKit/Coins/Platform%20Coins/P2P/P2P.jpg "Peer to Peer Network")
 
 #### Fermat Goals
 
@@ -115,7 +116,7 @@ Fermat is moving towards version 1, but we're not stopping there. We have many f
 You can learn more, see some cool images of Fermat's architecture and its P2P network and explore the design space at [Fermat.org](http://www.fermat.org).
 
 
-![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Coins/Fiat%20Coins/Fiat%20Art/Scene1/HQ_1920x1080.jpg "Fermat Digital Money")
+![alt text](https://fermat-ORG/media-kit/blob/master/MediaKit/Coins/Fiat%20Coins/Fiat%20Art/Scene1/HQ_1920x1080.jpg "Fermat Digital Money")
 
 <br>
 ### Fermat's Purpose
@@ -240,7 +241,7 @@ Installers for the latest version of Android can be [downloaded here](http://fer
 
 In addition to the core features built into Fermat, there is a growing community of developers building _Plug-ins_ and _Niche Wallets_ that add all sorts of useful functionality.
 
-For instructions on how to install and run the source code, see the [Installation Guide](https://github.com/bitDubai/fermat/blob/master/README-INSTALLATION.md).
+For instructions on how to install and run the source code, see the [Installation Guide](https://Fermat-ORG/fermat/blob/master/README-INSTALLATION.md).
 
 #### Need Help?
 
@@ -249,7 +250,7 @@ log into the [IRC DEV Channel](http://irc.lc/freenode/fermat-dev/), and we will 
 
 #### Learn More?
 
-Take a look at the [Fermat Book](https://github.com/bitDubai/fermat/tree/master/fermat-book) that it is being written in order to help developers learn more about Fermat technology.
+Take a look at the [Fermat Book](https://Fermat-ORG/fermat/tree/master/fermat-book) that it is being written in order to help developers learn more about Fermat technology.
 
 #### Project status
 
@@ -268,13 +269,13 @@ Awesome!
 
 #### Developers
 
-If you are a developer and want to contribute either from a bug-fix up to building a whole financial APP on top of Fermat, please read the [Contributing Guide](https://github.com/bitDubai/fermat/blob/master/CONTRIBUTING.md),
+If you are a developer and want to contribute either from a bug-fix up to building a whole financial APP on top of Fermat, please read the [Contributing Guide](https://fermat-ORG/fermat/blob/master/CONTRIBUTING.md),
 then learn how to pull the repo and hack on Fermat. Then say hi at our [IRC DEV Channel](http://irc.lc/freenode/fermat-dev/) or you can also find us on [Facebook](https://www.facebook.com/FermatOrg/). 
 
 #### Others
 
-You don't need to be a developer to participate on the project. There are many ways to do it and we explain each one of them at the [How to Participate Guide](https://github.com/bitDubai/participate-now).
+You don't need to be a developer to participate on the project. There are many ways to do it and we explain each one of them at the [How to Participate Guide](https://Fermat-ORG/participate-now).
 
-![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Coins/Fermat%20Bitcoin/PerspView/1/Front_HQ_1920x1080.jpg "Fermat Coin")
+![alt text](https://Fermat-ORG/media-kit/blob/master/MediaKit/Coins/Fermat%20Bitcoin/PerspView/1/Front_HQ_1920x1080.jpg "Fermat Coin")
 
 
