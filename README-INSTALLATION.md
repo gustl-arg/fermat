@@ -41,7 +41,7 @@ You will need the following tools in order to develop in Fermat
 * **Android build-tools 23.01**
 * **Android Development Studio or IntelliJ IDEA**
 
-Although there are many ways to configure these tools, we suggest to follow the recommended configuration that has been tested by our team, by means of the automatic installationscript or following the manual installation steps.
+Although there are many ways to configure these tools, we suggest to follow the recommended configuration that has been tested by our team, by means of the automatic installation script or following the manual installation steps.
 
 
 ### 3.- Installation
@@ -423,8 +423,6 @@ The main advantage the SubApp Developer gives is to allow debugging without the 
 <br>
 It also allows accessing the database in a practical way to avoid using external Browsers.
 
-#### How to enable your Plug-in on the Developer Sub App
 
-**Explain how step by step with code samples**
 
 
