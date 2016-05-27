@@ -1,6 +1,6 @@
 <!-- all links tested by laderuner -->
 
-![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
+![alt text](https://github.com/Fermat-ORG/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
 
 <br><br>
 
@@ -29,7 +29,7 @@ A GUI component in Fermat is divided into 2 Plug-ins, the graphic interfaces and
 - Works as a connection between the Plug-ins of the platform, cosuming the services that they provide.
 - It covers the logic of the presentation, gathering, organizing and grouping Plug-in data.
 
-For more information about how to create a Module refer to [this documentation](https://github.com/bitDubai/fermat/blob/master/README-PLUG-INS.md)
+For more information about how to create a Module refer to [this documentation](https://github.com/Fermat-ORG/fermat/blob/master/README-PLUG-INS.md)
 
 <!--COMENTARIO !!!!-->
 <!--**Creo que aqui antes de hablar de los problemas de persistencia de info entre fragmentos y hablar de la solucion (las sesiones), hay que hablar de fragmentos, y el fragment factory y el enum de fragmentos quiza**-->
@@ -934,14 +934,14 @@ it is temporarily located in the /android-core/common/version_1/ProvisoryData cl
 
 4. Create the Navigation Structure:
 
-- If you are creating a Wallet go to: `WPD/plugin/engine/fermat-wpd-plugin-engine-wallet-runtime-bitdubai/.../WalletRuntimeEnginePluginRoot.java`
-- If you are creating a Sub-App go to: `DMP/plugin/engine/fermat-dmp-plugin-engine-sub-app-runtime-bitdubai/.../SubAppRuntimeEnginePluginRoot.java`
+- If you are creating a Wallet go to: `WPD/plugin/engine/fermat-wpd-plugin-engine-wallet-runtime-Fermat-ORG/.../WalletRuntimeEnginePluginRoot.java`
+- If you are creating a Sub-App go to: `DMP/plugin/engine/fermat-dmp-plugin-engine-sub-app-runtime-Fermat-ORG/.../SubAppRuntimeEnginePluginRoot.java`
 - Add the Navigation Structure as described in the **Navigation Structure** section of this document using the Activities and Fragments created above.
 
 5. Create an icon in the Desktop:
 
-- If you are creating a Wallet go to: `DMP/android/sub_app/fermat-dmp-android-sub-app-wallet-manager-bitdubai/.../DesktopFragment.java`
-- If you are creating a Sub-App go to: `PIP/android/sub_app/fermat-pip-android-sub-app-sub-app-manager-bitdubai/.../DesktopSubAppFragment.java`
+- If you are creating a Wallet go to: `DMP/android/sub_app/fermat-dmp-android-sub-app-wallet-manager-Fermat-ORG/.../DesktopFragment.java`
+- If you are creating a Sub-App go to: `PIP/android/sub_app/fermat-pip-android-sub-app-sub-app-manager-Fermat-ORG/.../DesktopSubAppFragment.java`
 - Add in the `getMoreData()` method the Wallet or Sub-App, in a way so the Desktop shows the wallet icon in order to be able to open it.
 
 ## References:
