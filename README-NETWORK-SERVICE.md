@@ -1,5 +1,5 @@
 <!-- all links tested by laderuner -->
-![alt text](https://github.com/bitDubai/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
+![alt text](https://github.com/Fermat-ORG/media-kit/blob/master/MediaKit/Fermat%20Branding/Fermat%20Logotype/Fermat_Logo_3D.png "Fermat Logo")
 
 <br><br>
 
@@ -276,7 +276,7 @@ It is possible to execute a local server for testing a Plug-in Network Service; 
 
 1. **GUI**
 If you use Intellij IDEA you can simple start server with right click on
-`/fermat/P2P/plugin/communication/fermat-p2p-plugin-communication-cloud-server-bitdubai/src/main/java/com/bitdubai/fermat_p2p_plugin/layer/ws/communications/cloud/server/developer/bitdubai/version_1/WsCommunicationsServerCloudMainRunner.java`
+`/fermat/P2P/plugin/communication/fermat-p2p-plugin-communication-cloud-server-bitdubai/src/main/java/com/Fermat-ORG/fermat_p2p_plugin/layer/ws/communications/cloud/server/developer/bitdubai/version_1/WsCommunicationsServerCloudMainRunner.java`
 and choose Run main()
 <br>
  to tell log4j where is the path to log4j.properties in Run/Debug Configuration dialog choose Application: WsCommunicationsServerCloudMainRunner and set <br>
