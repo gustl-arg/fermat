@@ -16,7 +16,7 @@ To accomplish its mission, a GUI component must have a wireframe.
 
 ### Wallet
 
-A Wallet is a GUI Component that allows a user to carry out financial transactions, like sending and receiving crypto currencies, using different Plug-ins that Fermat offers through Modules. Each Module Wallet has an associated Module, thus, there is a one-on-one relationship between a Wallet and its Module.
+A Wallet is a GUI Component that allows a user to carry out financial transactions, like sending and receiving crypto currencies, using different Plug-ins that Fermat offers through Modules. Each Module Wallet has an associated Module, thus, there is a one-on-one relationship between a Wallet and its Module Through this can be made purchasing items on-line with a computer or using a smartphone to purchase something at a store
 
 ### SubApp
 
@@ -26,7 +26,7 @@ A SubApp is a GUI Component that allows a user to carry out non-financial operat
  
 A GUI component in Fermat is divided into 2 Plug-ins, the graphic interfaces and the module of such interface. This last one has the following functionalities:
 
-- Works as a connection between the Plug-ins of the platform, cosuming the services that they provide.
+- Works as a connection between the Plug-ins of the platform, consume the services that they provide.
 - It covers the logic of the presentation, gathering, organizing and grouping Plug-in data.
 
 For more information about how to create a Module refer to [this documentation](https://github.com/bitDubai/fermat/blob/master/README-PLUG-INS.md)
@@ -52,7 +52,7 @@ public class ReferenceWalletSession extends AbstractFermatSession<InstalledWalle
 ```
 Where:
 - `InstalledWallet` holds a reference to the installed wallet.
-- `CryptoWalletManager` is the module corresponding to the wallet mentioned.
+- `CryptoWalletManager` is the module corresponding to the wallet mentioned Or Used.
 - `ProviderManager` (not used at this time) is a Fermat equivalent to android's R class.
 
 <br>
