@@ -26,7 +26,7 @@ The advisable requirements to ensure enough CPU power to run the project are:
 It is highly recommended that you use Linux instead of Windows, since compilation time significantly reduces. Developers that began  setting up a Windows environment finally gave up and moved to Ubuntu (Linux most popular distribution).<br> 
 To use Ubuntu, you will need:
 * a) 30 Gb Free space in you hard disk, to allocate a new *partition* to install Ubuntu (this will NOT affect your Windows partition)
-* b) A valid UBUNTU disc image ( you can download v.14.04.3  here:  [Ubuntu 64-bit] (http://releases.ubuntu.com/14.04.3/ubuntu-14.04.3-desktop-amd64.iso?_ga=1.159021118.501985227.1450309029) ) (please check if there is an updated one )
+* b) A valid UBUNTU disc image ( you can download v.14.04.3  here:  [Ubuntu 64-bit] (http://www.ubuntu.com/download/desktop) ) (Please check for new updates )
 * c) A free DVD to create the UBUNTU installation disk. Copy the image file and boot from the DVD, and follow the instructions.
 
 <br>
