@@ -23,7 +23,7 @@ The advisable requirements to ensure enough CPU power to run the project are:
 <br>
 ### 1.- Working on Linux - PLEASE READ THIS FIRST- 
 
-It is highly recommended that you use Linux instead of Windows, since compilation time significantly reduces. Developers that began  setting up a Windows environment finally gave up and moved to Ubuntu (Linux most popular distribution).<br> 
+It is highly recommended that you use Linux instead of Windows, since compilation time significantly reduces. Developers that began  setting up a Windows environment finally gave up and moved to Ubuntu to expedite the process in terms of work and compilation (Linux most popular distribution).<br> 
 To use Ubuntu, you will need:
 * a) 30 Gb Free space in you hard disk, to allocate a new *partition* to install Ubuntu (this will NOT affect your Windows partition)
 * b) A valid UBUNTU disc image ( you can download v.14.04.3  here:  [Ubuntu 64-bit] (http://releases.ubuntu.com/14.04.3/ubuntu-14.04.3-desktop-amd64.iso?_ga=1.159021118.501985227.1450309029) ) (please check if there is an updated one )
@@ -41,7 +41,8 @@ You will need the following tools in order to develop in Fermat
 * **Android build-tools 23.01**
 * **Android Development Studio or IntelliJ IDEA**
 
-Although there are many ways to configure these tools, we suggest to follow the recommended configuration that has been tested by our team, by means of the automatic installationscript or following the manual installation steps.
+Although there are many ways to configure these tools, we suggest to follow the recommended configuration that has been tested by our team, by means of the automatic installationscript or following the manual installation steps
+this decision can be unanime.
 
 
 ### 3.- Installation
