@@ -3,15 +3,16 @@
 
 # Welcome to Fermat!
 
-In the last 20 years virtually everything went digital: pictures, music, videos, mails, etc. Nevertheless we still have cash as paper money. 
+
+In the past 20 years , virtually everything was digital : pictures, music , videos , messages, etc. But we still have cash as paper money . which it is used for many day to day actions
 
 #### Why isn't cash money digital yet?
 
-The reason is that digital information can be cloned, and if digital cash could be cloned it would render it useless. When bitcoin was invented it brought with it the solution to the last barrier preventing money from going digital: the solution to the _double spend problem_.
+The reason is that digital information can be cloned, and if the digital money could be cloned would render it useless. Bitcoin invented when I brought the solution to the last barrier that prevents money from digital: the solution to _Double problem_ spending.
 
-We firmly believe that the next decade will witness governments issuing digital currency based on blockchain technology. We expect paper money is going to disappear within the next 5 to 10 years. Thus a strong consumer demand for digital wallets will inevitably emerge.
+We firmly believe that the next decade will see governments issuing digital currency based on blockchain technology. We hope that paper money will disappear in the next 5 to 10 years. Therefore a strong consumer demand for digital portfolios will inevitably arise.
 
-In order to meet this demand thousands of wallets should be available. Wallets will evolve into sophisticated financial applications. Such a wide variety of wallets / financial applications are indispensable owing to the diversity characterizing the world's population and its financial needs. In fact most of current mobile APPs will turn into financial APPs once Fermat provides them with the ability to easily handle digital cash and digital assets. 
+In order to meet this demand thousands of portfolios must be available. Portfolios will evolve in the sophisticated financial applications. This wide variety of portfolios / financial applications are essential because of the diversity that characterizes the world's population and their financial needs. In fact most mobile applications today will become APPs financial time Fermat gives them the ability to easily handle digital money and digital assets. This being that used by the sin of having cloned the sea Mede or bag or purse to be utlizado so without the Mede being cloned or your money or your wallet
 
 #### The Master Plan
 
